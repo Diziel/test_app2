@@ -1,0 +1,30 @@
+@import "../../../assets/styles/variables.scss";
+
+.nav-container {
+  box-shadow: 0rem 0.0625rem 0.875rem -0.5625rem $gray-deep;
+
+  .nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      list-style: none;
+      display: block;
+
+      a {
+        transition: all 0.2s ease-in-out;
+        display: block;
+        padding: 0.625rem;
+        text-decoration: none;
+        text-align: center;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+}

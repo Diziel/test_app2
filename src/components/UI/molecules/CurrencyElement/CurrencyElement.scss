@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/variables.scss";
+
+.currency-wrapper {
+  background-color: $gray-light;
+  border-radius: 0.0625rem;
+  text-align: center;
+  position: relative;
+  padding: 0.3125rem 0rem;
+
+  .icon {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background: $black;
+    color: $white;
+    border-radius: 1.875rem;
+    padding: 0 0.25rem;
+    border: 0.0938rem solid $white;
+    margin: 0;
+    transform: rotate(45deg);
+    font-size: 0.8125rem;
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border-color: $black;
+    }
+  }
+}

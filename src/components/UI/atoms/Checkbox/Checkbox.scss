@@ -1,0 +1,65 @@
+@import "../../../../assets/styles/variables.scss";
+
+.checkbox-wrapper {
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+  position: relative;
+  padding: 0.3125rem 0.3125rem 0.3125rem 1.825rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.875rem;
+  background-color: $gray-light;
+  border: 0.0625rem solid $gray;
+  color: $blue-dark;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+
+  &.checked {
+    background-color: $white;
+  }
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-wrapper .checkmark {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: 0.3438rem;
+  left: 0.25rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid $gray;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  background: $white;
+  border: 0.0625rem solid $gray;
+}
+
+.checkmark:after {
+  content: "+";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-wrapper .checkmark:after {
+  left: 2px;
+  top: -4px;
+  transform: rotate(45deg);
+  font-size: 19px;
+  color: $red-dark;
+}

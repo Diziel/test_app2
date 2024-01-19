@@ -1,13 +1,9 @@
 import React from "react";
 
 import "./CloseButton.scss";
+import { ButtonProps } from "../../../../types/CloseButtonTypes";
 
-interface ButtonProps {
-  onClick: () => void;
-  className?: string;
-}
-
-const Button: React.FC<ButtonProps> = ({ onClick, className }) => {
+const CloseButton: React.FC<ButtonProps> = ({ onClick, className }) => {
   return (
     <div className={`button ${className}`} onClick={onClick}>
       +
@@ -15,4 +11,4 @@ const Button: React.FC<ButtonProps> = ({ onClick, className }) => {
   );
 };
 
-export default Button;
+export default CloseButton;

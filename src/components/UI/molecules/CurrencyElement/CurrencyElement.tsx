@@ -2,12 +2,7 @@ import React, { memo } from "react";
 import { CloseButton } from "../..";
 
 import "./CurrencyElement.scss";
-
-interface CurrencyElementProps {
-  name: string;
-  handleRemove: (name: string) => void;
-  className?: string;
-}
+import { CurrencyElementProps } from "../../../../types/CurrencyElementTypes";
 
 const CurrencyElement: React.FC<CurrencyElementProps> = memo(
   ({ name, handleRemove, className }) => {

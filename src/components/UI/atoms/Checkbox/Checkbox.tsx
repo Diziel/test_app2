@@ -1,13 +1,7 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 
 import "./Checkbox.scss";
-
-interface CheckboxProps {
-  name: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  checked: boolean;
-  className?: string;
-}
+import { CheckboxProps } from "../../../../types/CheckboxTypes";
 
 const Checkbox: React.FC<CheckboxProps> = ({
   name,

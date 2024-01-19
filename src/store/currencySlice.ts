@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface CurrencyState {
-  list: string[];
-}
+import { CurrencyState } from "../types/currencySliceTypes";
 
 const initialState: CurrencyState = {
   list: [],
